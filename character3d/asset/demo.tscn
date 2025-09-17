@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://dvi7kkil10n2r"]
+
+[ext_resource type="Script" uid="uid://bv8yxsctxkfye" path="res://asset/demo.gd" id="1_bp6lh"]
+[ext_resource type="PackedScene" uid="uid://dw4ruqa3ccpl6" path="res://asset/character3d.tscn" id="2_h4np7"]
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_bp6lh")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.99966, -0.0260707, -6.35684e-05, 0.0240284, 0.9204, 0.390239, -0.0101153, -0.390108, 0.920713, 1.08771, 3.22441, 5.36224)
+fov = 88.7
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.9998, -0.0200001, 0, 0.0200001, 0.9998, 0, 10.2527, 0.223507)
+shadow_enabled = true
+
+[node name="character3d" parent="." instance=ExtResource("2_h4np7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.48057, 0, 0)
+
+[node name="character3d2" parent="." instance=ExtResource("2_h4np7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.332751, 0, 0)
+
+[node name="character3d3" parent="." instance=ExtResource("2_h4np7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.72254, 0, 0)
